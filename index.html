@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="prev()">
+        <span class="material-symbols-outlined"> arrow_back_ios_new </span>
+      </button>
+      <div class="product-container">
+        <h1 id="title"></h1>
+        <h4 id="price"></h4>
+        <img src="" alt="" id="img" />
+        <p id="des"></p>
+      </div>
+      <button onclick="next()">
+        <span class="material-symbols-outlined"> arrow_forward_ios </span>
+      </button>
+    </div>
+
+    <script src="./Product.js"></script>
+  </body>
+</html>
