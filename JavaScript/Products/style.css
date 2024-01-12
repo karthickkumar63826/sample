@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCF2F1;
+    text-align: center;
+    font-family: monospace;
+  }
+  .container{
+    width: 70%;
+    height: 500px;
+    background-color: #7FC7D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-container{
+    width: 90%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    overflow: hidden;
+  }
+  h1, p{
+    color: #365486;
+  }
+  img{
+    width: 200px;
+    height: 200px;
+  }
+  button{
+    background-color: #7FC7D9;
+    color: #0F1035;
+    border: none;
+    height: 100px;
+    
+  }
