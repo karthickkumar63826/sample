@@ -209,46 +209,58 @@ let products = [
 
 let currentIndex = 0;
 
-
-  function prev() {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = products.length - 1;
-    }
-    document.getElementById(
-      "title"
-    ).innerHTML = `${products[currentIndex].title}`;
-    document.getElementById(
-      "price"
-    ).innerHTML = `$${products[currentIndex].price}`;
-    document.getElementById("img").src = `${products[currentIndex].image}`;
-    document.getElementById(
-      "des"
-    ).innerHTML = `${products[currentIndex].description}`;
+function prev() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = products.length - 1;
   }
+  document.getElementById(
+    "title"
+  ).innerHTML = `${products[currentIndex].title}`;
+  document.getElementById(
+    "price"
+  ).innerHTML = `$${products[currentIndex].price}`;
+  document.getElementById("img").src = `${products[currentIndex].image}`;
+  document.getElementById(
+    "des"
+  ).innerHTML = `${products[currentIndex].description}`;
+}
 
-  function next() {
-    currentIndex++;
-    if (currentIndex > products.length) {
-      currentIndex = 0;
-    }
-    document.getElementById(
-      "title"
-    ).innerHTML = `${products[currentIndex].title}`;
-    document.getElementById(
-      "price"
-    ).innerHTML = `$${products[currentIndex].price}`;
-    document.getElementById("img").src = `${products[currentIndex].image}`;
-    document.getElementById(
-      "des"
-    ).innerHTML = `${products[currentIndex].description}`;
+function next() {
+  currentIndex++;
+  if (currentIndex > products.length) {
+    currentIndex = 0;
   }
+  document.getElementById(
+    "title"
+  ).innerHTML = `${products[currentIndex].title}`;
+  document.getElementById(
+    "price"
+  ).innerHTML = `$${products[currentIndex].price}`;
+  document.getElementById("img").src = `${products[currentIndex].image}`;
+  document.getElementById(
+    "des"
+  ).innerHTML = `${products[currentIndex].description}`;
+}
 
-  window.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("title").innerHTML = `${products[0].title}`;
-    document.getElementById("price").innerHTML = `$${products[0].price}`;
-    document.getElementById("img").src = `${products[0].image}`;
-    document.getElementById("des").innerHTML = `${products[0].description}`;
-  });
+window.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("title").innerHTML = `${products[0].title}`;
+  document.getElementById("price").innerHTML = `$${products[0].price}`;
+  document.getElementById("img").src = `${products[0].image}`;
+  document.getElementById("des").innerHTML = `${products[0].description}`;
+});
 
-  setInterval(()=> next(), 3000)
+setInterval(() => next(), 3000);
+
+const productTitle = () => {
+  for(let i=0; i< products.length; i++){
+    console.log(products[i].title);
+  }
+}
+setTimeout(productTitle, 5000);
+
+let count = 0;
+setInterval(() => {
+  console.log(products[count].title);
+  count++;
+}, 1000);

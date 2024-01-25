@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #F5EEE6;
+      }
+      .clock {
+        width: 500px;
+        height: 200px;
+        background-color: #FFF8E3;
+        color: #F3D7C4;
+        font-size: 50px;
+        font-weight: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 5px 5px 8px rgba(0, 0, 0, 0.2),
+          5px 5px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"></div>
+    <script>
+      const clock = document.querySelector(".clock");
+      function displayTime() {
+        let dateTime = new Date();
+        clock.innerHTML = `${dateTime.getHours().toString().padStart(2, "0")} :
+         ${dateTime.getMinutes().toString().padStart(2, "0")} : 
+         ${dateTime.getSeconds().toString().padStart(2, "0")}`;
+      }
+      setInterval(() => displayTime(), 1000);
+    </script>
+  </body>
+</html>
