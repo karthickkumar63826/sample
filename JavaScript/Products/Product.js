@@ -251,3 +251,4 @@ let currentIndex = 0;
     document.getElementById("des").innerHTML = `${products[0].description}`;
   });
 
+  setInterval(()=> next(), 3000)
